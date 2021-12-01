@@ -1,0 +1,578 @@
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/JoyPixels.css');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.theme-dark {
+  --text-normal: #ffffff;
+  --background-primary: #353535;
+  --background-secondary: #2d2d2d;
+  --background-secondary-alt: #313131;
+  --background-tertiary: #282828;
+  --background-accent: #559ef7cc;
+  --background-floating: #282828;
+  --background-mobile-primary: #353535;
+  --background-mobile-secondary: #2d2d2d;
+  --background-modifier-selected: #353535;
+  --background-modifier-accent: #282828;
+  --background-mentioned: rgba(245, 121, 0, 0.05);
+  --background-mentioned-hover: rgba(245, 121, 0, 0.08);
+  --background-message-hover: rgba(40, 40, 40, 0.3);
+  --background-help-warning: rgba(245, 121, 0, 0.1);
+  --background-help-info: rgba(27, 106, 203, 0.1);
+  --scrollbar-thin-thumb: #a4a4a3;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #a4a4a3;
+  --scrollbar-auto-track: #313131;
+  --scrollbar-auto-scrollbar-color-thumb: #a4a4a3;
+  --scrollbar-auto-scrollbar-color-track: #2d2d2d;
+  --channeltextarea-background: #2d2d2d;
+  --logo-primary: #1b6acb;
+  --focus-primary: #1b6acb;
+  --activity-card-background: #282828;
+  --textbox-markdown-syntax: #1b6acb;
+  --radio-group-dot-foreground: #1b6acb;
+  --dnome-base: #2d2d2d;
+  --dnome-bg: #353535;
+  --dnome-sidebar: #313131;
+  --dnome-border: #1b1b1b;
+  --dnome-dark-fill: #282828;
+  --dnome-scroll-bg: #313131;
+  --dnome-fg: #eeeeec;
+  --dnome-scrollbar-slider-color: #a4a4a3;
+  --dnome-accent: #1b6acb;
+  --dnome-link-color: #629fea;
+  --dnome-text-color: #ffffff;
+  --dnome-warning: #f57900;
+  --dnome-darker-base: #202020;
+  --dnome-darker-accent: #15539e;
+  --dnome-faded-accent: rgba(27, 106, 203, 0.4);
+  --dnome-error: #cc0000;
+}
+
+/*KEYFRAMES ANIMATION*/
+@keyframes zoom         {0%{transform:scale(1)}90%{transform:scale(1.5)}100%{transform:scale(1)}}
+@keyframes zoomrotate   {0%{transform:rotate(0) scale(1)}90%{transform:rotate(340deg)scale(.75)}100%{transform:rotate(360deg)scale(1)}}
+@keyframes wobble       {0%,100%{transform:rotate(20deg)}50%{transform:rotate(-20deg)}}
+@keyframes scare        {0%,100%{transform:rotate(9deg)}50%{transform:rotate(-9deg)}}
+@keyframes hourglass    {0%,100%,41%{transform:rotate(0)}20%,40%{transform:rotate(-180deg)}}
+@keyframes rotate       {0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+@keyframes rofl         {0%{transform:rotate(45deg)}100%{transform:rotate(404deg)}}
+@keyframes heartbeat    {0%,100%,40%,80%{transform:scale(.75)}20%,60%{transform:scale(1)}}
+@keyframes joy          {0%,100%,50%{transform:scale(.9)}25%,75%{transform:scale(1)}}
+@keyframes boom         {0% {transform:scale(.1)}20% {transform:scale(1)}80% {transform:scale(1);opacity: 1;}100%{opacity: 0;}}
+@keyframes bomb         {0%,100%,20%{transform:scale(1)}90%{transform:scale(.6)}95%{transform:scale(1.5)}}
+@keyframes eyes         {0%,25%,75%{transform:scaleX(1)}50%,100%{transform:scaleX(-1)}}
+@keyframes hardrotate   {0%{ transform: rotate(0deg);}69% { transform: rotate(0deg);}70% { transform: rotate(-90deg);}99%{ transform: rotate(-90deg);}100% { transform: rotate(0deg); }}
+@keyframes vibrate      {25%{transform: translateX(3px) translateY(-2px)}50%{transform: translateX(-1px) translateY(3px)}75%{transform: translateX(-4px) translateY(-2px)}100%{transform: translateX(2px) translateY(-1px)}}
+
+.theme-dark div[class*="autocomplete-"],
+.theme-dark div[class*="tierHeaderLocked-"]{
+  background-color: var(--dnome-dark-fill);
+}
+.theme-dark div[class*="selectable-"],
+.theme-dark div[class*="perksModal"]{
+  background-color: var(--dnome-base);
+}
+.theme-dark div[class*="autocompleteRowVertical"] > div[class*="selectable-"][class*="selected-"],
+.theme-dark div[class*="selected-"]:not([class*="tabBarItem"], [class*="gifFavoriteButton"]),
+.theme-dark div[class*="tierBody"],
+.theme-dark ul[class*="perks"] > li[class*="perk-"]{
+  background-color: var(--dnome-bg);
+}
+.theme-dark div[class*="uploadModal-"],
+.theme-dark div[class*="peopleColumn-"] {
+  background-color: var(--background-primary);
+}
+.theme-dark div[class*="uploadModal-"] > div[class*="footer"] {
+  background-color: var(--background-tertiary);
+}
+
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.sidebar-2K8pFh > section > div.wrapper-24pKcD > div > div.actionButtons-14eAc_ > button:nth-child(1) > div > div > svg, 
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.sidebar-2K8pFh > section > div.wrapper-24pKcD > div > div.actionButtons-14eAc_ > button:nth-child(2) > div > div > svg, 
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.chat-3bRxxu > section > div.toolbar-1t6TWx > a, 
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.chat-3bRxxu > section > div.toolbar-1t6TWx > div:nth-child(1), 
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.chat-3bRxxu > section > div.children-19S4PO > div.iconWrapper-2OrFZ1,
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.sidebar-2K8pFh > nav > div.container-1taM1r.clickable-25tGDB > header > div,
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.sidebar-2K8pFh > section > div.wrapper-24pKcD > div > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.connection-3KRENF > div.flex-1xMQg5.flex-1O1GKY.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6 > button:nth-child(1),
+div[class*="ephemeral-1PsL1r"], /*Bloque les messages de Clyde*/
+#search-results > div:nth-child(1) > div.searchLearnMore-3SQUAj,
+div[class*="bar-30k2ka unreadBar-3t3sYc unread-1xRYoj active-1SSsBb"] /*Barre nouveaux messages*/,
+div[class*='channelNotice-1-XFjC invite-OjTXrW'],
+rect[id*='-lower_badge_masks'],
+rect[id*='-upper_badge_masks'],
+mask[id*='22f9eca1-80d5-44f8-ad91-1516161c3966'],
+#app-mount > div.app-1q1i1E > div > div.leftSplit-1qOwnR.nonEmbeddedLeftSplit-3z6mge > div > div > form > div > div > div.mainLoginContainer-1ddwnR > div.colorHeaderSecondary-3Sp3Ft.size16-1P40sf,
+#app-mount > div.app-1q1i1E > div > div.leftSplit-1qOwnR.nonEmbeddedLeftSplit-3z6mge > div > div > form > div > div > div.mainLoginContainer-1ddwnR > h3,
+#private-channels-2, /*nitro sur page d'accueil*/
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div.notice-3bPHh-
+{
+  display:none
+}
+div[class*='reaction-1hd86g reactionMe-wv5HKu']{
+  border-radius: 5px;
+  
+}
+div[class*="reaction-1hd86g"]:hover,
+div[class*='reaction-1hd86g reactionMe-wv5HKu'] {
+  border : none;
+
+}
+#app-mount > div.app-1q1i1E > div > div.leftSplit-1qOwnR.nonEmbeddedLeftSplit-3z6mge > div > div{
+  opacity: 100%;
+}
+#app-mount > div.app-1q1i1E > div > div.leftSplit-1qOwnR.nonEmbeddedLeftSplit-3z6mge > div > div > form > div > div > div.transitionGroup-aR7y1d.qrLogin-1AOZMt > div > div > div > div.qrCodeContainer-3sXarj > div.qrCodeOverlay-qgtlTP > img {
+  content:url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Penrose-dreieck.svg/847px-Penrose-dreieck.svg.png');
+}
+
+/*Custom background login page*/
+#app-mount > div.app-1q1i1E > div > div.rightSplit-2US0xy > img{
+  content:url("https://leafyluigi.github.io/images/Synthscape%20by%20AxiomDesign.png");
+  width: auto;
+  max-height: 100%;
+}
+#app-mount > div.app-1q1i1E > div > div.leftSplit-1qOwnR.nonEmbeddedLeftSplit-3z6mge > div > div > form > div > div > div.transitionGroup-aR7y1d.qrLogin-1AOZMt > div > div > div > div.colorHeaderSecondary-3Sp3Ft.size16-1P40sf{
+  display: none
+}
+#app-mount > div.app-1q1i1E > div > div.leftSplit-1qOwnR.nonEmbeddedLeftSplit-3z6mge > div > div > form > div > div > div.transitionGroup-aR7y1d.qrLogin-1AOZMt > div > div > div:after{
+  font: small-caps bold 20px/1 "Orbitron", serif;
+  content: 'Custom CSS by BeowolfK \A Based on Dnome Custom CSS'
+}
+/*pastille message/ voc/ partage d'écran etc*/
+rect[id*='-lower_badge_masks'],
+rect[id*='-upper_badge_masks']{
+  border : 1px solid red
+}
+/*hover serv*/
+div[class*='contents-18-Yxp attachButtonInner-PQjIyk']:hover{
+  animation: 1s rotate;
+}
+/*avatar*/
+img[class*='avatar-1BDn8e clickable-1bVtEA']:hover{
+  box-shadow: 0px 0px 5px 1px var(--dnome-darker-base);
+  transform : scale(1.5);
+  transition: all .5s ease-in-out;
+}
+/*image*/
+a[class*='anchor-3Z-8Bb anchorUnderlineOnHover-2ESHQB imageWrapper-2p5ogY imageZoom-1n-ADA clickable-3Ya1ho embedWrapper-lXpS3L']{
+  box-shadow: 5px 5px 7px var(--dnome-dark-fill), 0px 0px 5px var(--dnome-dark-fill);
+}
+/*ping*/
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > nav > ul > div.scroller-1Bvpku.none-2Eo-qx.scrollerBase-289Jih > div:nth-child(2) > div > div.listItemWrapper-KhRmzM > div > div,
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > nav > ul > div.scroller-1Bvpku.none-2Eo-qx.scrollerBase-289Jih > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > div > div > div.lowerBadge-29hYVK,
+div[class*="mentionsBadge-3tC7Mi iconBase-3LOlfs"],
+div[class*="lowerBadge-29hYVK"],
+div[class*='unreadMentionsIndicatorBottom-2mDYbI'],
+div[class*='unreadMentionsIndicatorTop-2-tcdU']
+{animation: ease-in joy 1s infinite;}
+
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.sidebar-2K8pFh > section > div.wrapper-24pKcD > div > div.actionButtons-14eAc_ > button:nth-child(1){
+  height :10px
+}
+
+span[class*='item-2hkk8m'],
+div[class*='unread-2lAfLh']{
+  background-color: lightgrey;
+}
+div[class*='modeUnread-1qO3K1']>div.content-1x5b-n>a.mainContent-u_9PKf>div.name-23GUGE.overflow-WK9Ogt>div.channelName-2YrOjO{
+  color : #bebebe
+}
+div[class*="item-2hkk8m"],
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > nav > ul > div.unreadMentionsIndicatorBottom-2mDYbI > div,
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > nav > ul > div.unreadMentionsIndicatorTop-2-tcdU > div {
+  background-color: var(--dnome-accent);
+}
+div[class*="colorDefault"]:not([class*="hideInteraction"]):hover,
+div[class*="colorDefault"][class*="focused"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="colorDefault"]:active {
+  background-color: var(--dnome-darker-accent) !important;
+}
+div[class*="colorDefault"][class*="colorBrand"]:not(:hover) {
+  color: var(--interactive-normal);
+}
+div[class*="colorDefault"] path[class*="checkbox-"] {
+  color: var(--dnome-accent);
+}
+div[class*="colorBrand"] {
+  color: var(--dnome-accent);
+}
+div[class*="wrapper"][class*="selected"] > div[class*="childWrapper"],
+div[class*="wrapper"]:hover > div[class*="childWrapper"] {
+  background-color: var(--dnome-accent) !important;
+}
+div[class*="folder-"],
+span[class*="expandedFolderBackground"] {
+  background-color: var(--background-primary);
+}
+div[class*="itemCard-"] > div > div[class*="body"] {
+  background-color: var(--dnome-bg);
+}
+div[class*="itemCard-"]:hover {
+  background-color: var(--dnome-darker-base) !important;
+}
+div[style*="background-color: rgb(67, 181, 129)"] {
+  background-color: var(--dnome-accent) !important;
+}
+div[class*="selectedCategoryItem"][class*="categoryItem"] > div[class*="itemInner"] {
+  background-color: var(--dnome-accent);
+}
+button[class*="button-"][class*="lookOutlined-"]:hover {
+  background-color: var(--dnome-darker-accent);
+}
+#search-results {
+  background-color: var(--dnome-base);
+}
+#search-results div[role="option"]:hover,
+#search-results div[role="option"][aria-selected="true"] {
+  background-color: var(--dnome-dark-fill);
+}
+#search-results div[role="option"]:after {
+  background: transparent;
+}
+div[class*="modal"][class*="small"] {
+  background-color: var(--dnome-base);
+}
+div[class*="modal"][class*="small"] > div[class*="footer"] {
+  background-color: var(--dnome-dark-fill);
+}
+div[class*="userPopout"] div[class*="headerNormal"] {
+  background-color: var(--dnome-dark-fill);
+}
+div[class*="userPopout"] div[class*="headerPlaying"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="userPopout"] > div[class*="body"],
+div[class*="userPopout"] div[class*="footer"],
+div[class*="userPopout"] div[class*="root"][aria-label*="Role"] {
+  background-color: var(--dnome-bg);
+}
+div[class*="userPopout"] input {
+  border-color: var(--dnome-accent) !important;
+}
+div[role="dialog"] > div[class*="root-"] {
+  background-color: var(--background-primary);
+}
+div[role="dialog"] > div[class*="root-"] > form > div[class*="footer"] {
+  background-color: var(--background-tertiary);
+}
+div[role="dialog"] > div[class*="root-"] > div[class*="footer"] {
+  background-color: var(--background-tertiary);
+}
+div[role="dialog"] > div[class*="root-"] > div[class*="content"] > div[class*="message"] {
+  background-color: var(--background-primary);
+}
+div[class*="roundButton"][class*="activeButton"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="mentioned-"]::before {
+  background-color: var(--dnome-warning);
+}
+[class*="lookFilled"][class*="color"]:not([class*="colorPrimary"]) {
+  background-color: var(--dnome-accent) !important;
+}
+div[class*="control"] > div[style*="background-color: rgb(67, 181, 129)"] {
+  background-color: var(--dnome-accent) !important;
+}
+circle[class*="radioIconForeground"] {
+  color: var(--dnome-accent);
+}
+div[class*="checkbox"][class*="checked"] {
+  border-color: var(--dnome-accent) !important;
+}
+div[class*="checkbox"][class*="checked"] > svg > path {
+  fill: var(--dnome-accent);
+}
+div[class*="checkbox"][class*="checked"][style*="background-color: rgb(114, 137, 218)"] {
+  background-color: var(--dnome-accent) !important;
+}
+div[class*="checkbox"][class*="checked"][style*="background-color: rgb(114, 137, 218)"] > svg > path {
+  fill: #ffffff;
+}
+div[class*="newMessagesBar"],
+div[class*="topSectionPlaying"] {
+  background-color: var(--dnome-accent);
+}
+svg[class*="premiumIcon"] {
+  color: var(--dnome-accent);
+}
+button[class*="shinyButton"] > div[class*="premiumSubscribeButton"] > svg[class*="premiumIcon"] {
+  color: #fff;
+}
+div[class*="tipTitle"] {
+  color: var(--dnome-accent);
+}
+div[class*="colorPremium"] svg[class*="icon-"] {
+  color: var(--dnome-accent);
+}
+span[class*="botTag-"] {
+  background-color: var(--dnome-accent);
+}
+span[class*="botTag-"][class*="botTagInvert-"] {
+  background-color: #fff;
+  color: var(--dnome-accent);
+}
+div[class*="previewContainer-"] > div[class*="previewOverlay-"] {
+  background-color: var(--background-secondary) !important;
+  border-color: var(--background-primary) !important;
+}
+span[class*="wrapper-"][class*="mention"] {
+  color: var(--dnome-link-color);
+  background-color: var(--background-help-info);
+}
+span[class*="wrapper-"][class*="mention"]:not([class*="hideInteraction"]):hover {
+  color: #ffffff !important;
+  background-color: var(--dnome-link-color) !important;
+}
+div[class*="warning"] {
+  border-color: var(--dnome-warning);
+}
+div[class*="barFill"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="progressContainer"] > div > div[class*="progressBar"] {
+  background-color: var(--dnome-accent) !important;
+}
+div[class*="isUnread"] {
+  border-color: var(--dnome-accent);
+}
+div[class*="isUnread"] > span[class*="unreadPill"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="isUnread"] > span[class*="unreadPill"] > svg > path[class*="unreadPillCap"] {
+  color: var(--dnome-accent);
+  fill: var(--dnome-accent);
+}
+div[class*="isUnread"] > span[class*="content"] {
+  color: var(--dnome-accent);
+}
+div[class*="circleIconButton"] {
+  color: var(--dnome-accent);
+}
+div[class*="circleIconButton"][class*="selected"] {
+  background-color: var(--dnome-accent) !important;
+}
+button[class*="buttonColor"] {
+  color: #ffffff !important;
+}
+div[class*="uploadModalIn-"] div[class*="uploadDropModal-"] div[class*="bgScale-"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="uploadModalIn-"] div[class*="uploadDropModal-"][class*="error-"] {
+  background-color: var(--dnome-error);
+}
+div[class*="uploadModalIn-"] div[class*="uploadDropModal-"][class*="error-"] div[class*="instructions"] {
+  color: #ffffffee;
+}
+div[class*="reactionMe"] {
+  background-color: var(--dnome-faded-accent) !important;
+}
+div[class*="notice-"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="notice-"][class*="colorBrand"] {
+  color: #fff;
+}
+div[class*="fakeButton-"] {
+  background-color: var(--dnome-accent);
+}
+svg[class*="iconTierThree-"] {
+  color: #fff;
+}
+div[class*="flowerStarContainer"] > svg[class*="flowerStar"] > path {
+  fill: var(--dnome-accent);
+}
+button[class*="selectorButton-"][class*="selectorButtonSelected"] {
+  background-color: var(--dnome-accent);
+}
+button[class*="selectorButton-"]:not([class*="selectorButtonPremiumRequired-"]):hover {
+  background-color: var(--dnome-accent);
+}
+div[class*="sourceThumbnail"][class*="selected"] {
+  box-shadow: inset 0 0 0 2px var(--dnome-accent);
+}
+div[aria-controls="Discord Nitro-tab"][aria-selected="false"],
+div[aria-controls="GUILD_PREMIUM-tab"][aria-selected="false"] {
+  color: var(--interactive-normal) !important;
+}
+div[aria-controls="Discord Nitro-tab"][aria-selected="false"][style*="background-color"],
+div[aria-controls="GUILD_PREMIUM-tab"][aria-selected="false"][style*="background-color"] {
+  background-color: var(--background-modifier-hover) !important;
+}
+div[aria-controls="Discord Nitro-tab"][aria-selected="true"],
+div[aria-controls="GUILD_PREMIUM-tab"][aria-selected="true"] {
+  color: var(--interactive-active) !important;
+  background-color: var(--background-modifier-selected) !important;
+}
+
+#app-mount > div.app-1q1i1E > div > div.layers-3iHuyZ.layers-3q14ss > div > div > div > div > div.chat-3bRxxu > div.content-yTz4x3 > main > form > div > div > div > div > div > div.buttons-3JBrkn > button{
+  display:none
+}
+
+/*Emoji mouvement*/
+/** Heart       **/ img[alt*=":heart:"], 
+                    img[alt*=":hearts:"], 
+                    img[alt*=":green_heart:"], 
+                    img[alt*=":blue_heart:"], 
+                    img[alt*=":purple_heart:"],
+                    img[alt*=":yellow_heart:"], 
+                    img[alt*=":heartbeat:"], 
+                    img[alt*=":heartpulse:"], 
+                    img[alt*=":black_heart:"], 
+                    img[alt*=":sparkling_heart:"] { animation: heartbeat 1s infinite;}
+
+/** Money Wings **/ img[alt*=":money_with_wings:"] {animation: wobble 2s infinite;}
+/** Kiss        **/ img[alt*=":kiss:"] {animation: heartbeat 1s infinite;}
+/** Hammer      **/ img[alt*=":hammer:"] {animation: wobble 0.5s infinite;}
+/** Pickaxe     **/ img[alt*=":pick:"] {animation: wobble 0.5s infinite;}
+/** Bomb        **/ img[alt*=":bomb:"], img[alt*=":boom:"], img[alt*=":zap:"] {animation: boom 2s infinite;}
+/** Eyes        **/ img[alt*=":eyes:"] {animation: eyes 4s infinite;animation-timing-function:steps(1);}
+/** Laughing    **/ img[alt*=":laughing:"] {transform: rotate(60deg);}
+/** Heart Eyes  **/ img[alt*=":heart_eyes:"] {animation: heartbeat 1s infinite;}
+/** Joyful      **/ img[alt*=":joy:"] {animation: joy 2s infinite;}
+/** Upside Down **/ img[alt*=":upside_down:"] {animation: wobble 2s infinite;}
+/** Scream      **/ img[alt*=":scream:"], img[alt*=":scream_cat:"] {animation: scare 2s infinite;}
+/** ROFL        **/ img[alt*=":rofl:"] {animation: rofl 2s infinite;}
+/** Sneezing    **/ img[alt*=":sneezing_face:"] {animation: wobble 1s infinite;}
+/** Joyful Cat  **/ img[alt*=":joy_cat:"] {animation: joy 2s infinite;}
+/** Heart Eyes  **/ img[alt*=":heart_eyes_cat:"] {animation: heartbeat 1s infinite;}
+/** Waving      **/ img[alt*=":wave:"] {animation: wobble 2s infinite;}
+/** Angry       **/ img[alt*=":angry:"], .emoji[alt*="Angery"], .emoji[alt*="Thonkery"], .emoji[alt*="angry_haha"] {animation: vibrate 0.2s infinite;}
+/** OTHER       **/ img[alt*=":derp:"] {animation: wobble 2s infinite;}
+/** OTHER       **/ img[alt*=":disappointed:"] {animation: zoomrotate 2s infinite;}
+/** OTHER       **/ img[alt*=":derp~1:"], img[alt*=":derppp:"], img[alt*=":kappa:"], img[alt*=":Kappa:"] {animation: zoom 7s infinite;}
+/** OTHER       **/ img[alt*=":sassouquer:"] {animation: zoom 5s infinite;}
+/** OTHER       **/ img[alt*=":slight_smile:"], img[alt*=":stuck_out_tongue:"], img[alt*=":wink:"] {animation: joy 2s infinite;}
+
+/** Soccer      **/ img[alt*=":soccer:"] {animation: rotate 2s infinite;} 
+/** Basketball  **/ img[alt*=":basketball:"] {animation: rotate 2s infinite;}
+/** Baseball    **/ img[alt*=":baseball:"] {animation: rotate 2s infinite;} 
+/** Tennis      **/ img[alt*=":tennis:"] {animation: rotate 2s infinite;}
+
+/** Gear        **/ img[alt*=":gear:"] {animation: rotate 2s infinite;}
+/** Disc & CD   **/ img[alt*=":cd:"], img[alt*=":dvd:"] {animation: rotate 2s infinite;} 
+
+/** Snowflake   **/ img[alt*=":snowflake:"] {animation: rotate 2s infinite;}
+/** Sun         **/ img[alt*=":sunny:"] {animation: rotate 2s infinite;}
+/** Hourglass   **/ img[alt*=":hourglass:"] {animation: hourglass 2s infinite;}
+/** Letter      **/ img[alt*=":regional_indicator_.:"] {animation: wobble 1s infinite;} /*REGEX VERSION DOESN'T WORKING*/
+/** Letter      **/ img[alt*=":regional_indicator_a:"],
+                    img[alt*=":regional_indicator_b:"],
+                    img[alt*=":regional_indicator_c:"],
+                    img[alt*=":regional_indicator_d:"],
+                    img[alt*=":regional_indicator_e:"],
+                    img[alt*=":regional_indicator_f:"],
+                    img[alt*=":regional_indicator_g:"],
+                    img[alt*=":regional_indicator_h:"],
+                    img[alt*=":regional_indicator_i:"],
+                    img[alt*=":regional_indicator_j:"],
+                    img[alt*=":regional_indicator_k:"],
+                    img[alt*=":regional_indicator_l:"],
+                    img[alt*=":regional_indicator_m:"],
+                    img[alt*=":regional_indicator_n:"],
+                    img[alt*=":regional_indicator_o:"],
+                    img[alt*=":regional_indicator_p:"],
+                    img[alt*=":regional_indicator_q:"],
+                    img[alt*=":regional_indicator_r:"],
+                    img[alt*=":regional_indicator_s:"],
+                    img[alt*=":regional_indicator_t:"],
+                    img[alt*=":regional_indicator_u:"],
+                    img[alt*=":regional_indicator_v:"],
+                    img[alt*=":regional_indicator_w:"],
+                    img[alt*=":regional_indicator_x:"],
+                    img[alt*=":regional_indicator_y:"],
+                    img[alt*=":regional_indicator_z:"]{animation: wobble 1s infinite;}
+
+
+
+/******CODE BLOCK COLOR ation syntaxique****/
+.hljs {
+  /*color: #969696 !important;*/
+  color: #C5C8C6 !important;
+}
+.hljs-params {
+  color: #467FB4  !important;
+}
+.hljs-built_in{
+  color: #e67a00 !important;
+}
+.hljs-type,
+.hljs-symbol,
+.hljs-class,
+.hljs-tag,
+.hljs-builtin-name,
+.hljs-bullet,
+.hljs-section,
+.hljs-template-tag, .hljs-selector-tag {
+  color: #c074c7 !important;
+}
+.hljs-keyword{
+  color: #c074c7 !important;
+}
+.hljs-function{
+  color: whitesmoke
+}
+.hljs-variable{
+  color: #467FB4 !important;
+}
+.hljs-selector-class {
+      color: #d179c0 !important;
+}
+
+.hljs-emphasis,
+.hljs-strong {
+  color: #f4b0ef !important;
+}
+
+.hljs-title,
+.hljs-name, .hljs-selector-id {
+  color: #e67a00 !important;
+}
+
+.hljs-string{
+  color: #9AA83A !important;
+}
+.hljs-code,
+.hljs-quote,
+.hljs-formula,
+.hljs-template-variable, .hljs-selector-attr {
+  color: #b54f87 !important;
+}
+
+.hljs-addition {
+  color: #ffaff8 !important;
+}
+
+.hljs-deletion {
+  color: #9e065e !important;
+}
+
+.hljs-number {
+  color: #467FB4 !important;
+}
+
+.hljs-doctag,
+.hljs-meta,
+.hljs-meta-keyword,
+.hljs-meta-string,
+.hljs-comment {
+  color: #afafaf !important;
+}
+
+/* a tester ce que c'est */
+/* .hljs-attr,
+.hljs-attribute {
+  color: #00ff22 !important;
+} 
+.hljs-params {
+  color: #00bf00 !important;
+}
+.hljs-subst, .hljs-selector-pseudo {
+  color: #09ff00 !important;
+}
+.hljs-regexp,
+.hljs-link {
+  color: #2bff00 !important;
+}
+.hljs-literal {
+  color: #00ff15 !important;
+}
